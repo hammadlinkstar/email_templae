@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Social Proof + Features Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+      /*All the styling goes here*/
+
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+      }
+
+      body {
+        background-color: #f6f6f6;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%;
+      }
+      table td {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        vertical-align: top;
+      }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #f6f6f6;
+        width: 100%;
+      }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 780px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 780px;
+        padding: 10px;
+      }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #ffffff;
+        border-radius: 3px;
+        width: 100%;
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      .content-block {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+
+      .footer {
+        /* clear: both;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;  */
+
+        clear: both;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+        margin-top: 11px;
+      }
+      .footer td,
+      .footer p,
+      .footer span,
+      .footer a {
+        color: #999999;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #000000;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+      p,
+      ul,
+      ol {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+      p li,
+      ul li,
+      ol li {
+        list-style-position: inside;
+        margin-left: 5px;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: underline;
+      }
+
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .btn > tbody > tr > td {
+        padding-bottom: 15px;
+      }
+      .btn table {
+        width: auto;
+      }
+      .btn table td {
+        background-color: #ffffff;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .btn a {
+        background-color: #ffffff;
+        border: solid 1px #3498db;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #3498db;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        padding: 12px 25px;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+
+      .btn-primary table td {
+        background-color: #3498db;
+      }
+
+      .btn-primary a {
+        background-color: #3498db;
+        border-color: #3498db;
+        color: #ffffff;
+      }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0;
+      }
+
+      .first {
+        margin-top: 0;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .align-left {
+        text-align: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .mt0 {
+        margin-top: 0;
+      }
+
+      .mb0 {
+        margin-bottom: 0;
+      }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0;
+      }
+
+      .powered-by a {
+        text-decoration: none;
+      }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #f6f6f6;
+        margin: 20px 0;
+      }
+
+      .btnTheme {
+        background: #6c539c;
+        margin-top: 23px;
+        border-radius: 50px;
+        display: block;
+        padding: 16px 32px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        font-weight: 600;
+        max-width: 105px;
+      }
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+        table.body h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important;
+        }
+        table.body p,
+        table.body ul,
+        table.body ol,
+        table.body td,
+        table.body span,
+        table.body a {
+          font-size: 16px !important;
+        }
+        table.body .wrapper,
+        table.body .article {
+          padding: 10px !important;
+        }
+        table.body .content {
+          padding: 0 !important;
+        }
+        table.body .container {
+          padding: 0 !important;
+          width: 100% !important;
+        }
+        table.body .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+        table.body .btn table {
+          width: 100% !important;
+        }
+        table.body .btn a {
+          width: 100% !important;
+        }
+        table.body .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important;
+        }
+       
+        .btnTheme{
+            margin: 15px 10px 0 10px;
+        }
+      }
+
+
+      @media screen and (max-width:480px) {
+        .main_heading{
+            font-size: 40px !important;
+    line-height: 43px !important;
+    }
+    .left_text{
+        padding-right: 15px;
+       }
+       .right_text{
+        padding-left: 15px;
+       }
+}
+
+
+
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
+        .btn-primary table td:hover {
+          background-color: #34495e !important;
+        }
+        .btn-primary a:hover {
+          background-color: #34495e !important;
+          border-color: #34495e !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="preheader"
+      >This is preheader text. Some clients will show this text as a
+      preview.</span
+    >
+    <table
+      role="presentation"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      class="body"
+    >
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+            <table style="margin-bottom: 20px;">
+              <tr>
+                <td>
+                  <a
+                    href="https://linkst.ar/"
+                    class="btnTheme"
+                    target="_blank"
+                    style="
+                      background: none;
+                      padding: 0;
+                      line-height: 0;
+                      margin: 0;
+                      float: left;
+                    "
+                  >
+                    <img
+                      src="https://uploads.codesandbox.io/uploads/user/adcc8816-3ca4-4e89-b714-e3b4fad44aec/SpQI-logosite.png"
+                      style="margin-top: 16px;"
+                    />
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href="https://app.linkst.ar/auth/login"
+                    class="btnTheme"
+                    target="_blank"
+                    style="
+                      margin: 0;
+                      background: transparent;
+                      border: 2px solid #6c539c;
+                      color: #6c539c;
+                      padding: 11px 12px;
+                      float: right;
+                      width: 100px;
+                    "
+                    >Login</a
+                  >
+                </td>
+              </tr>
+            </table>
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table role="presentation" class="main">
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper">
+                  <table
+                    role="presentation"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                  >
+                    <tr>
+                      <td>
+                        <!-- <img
+                          style="
+                            width: 100%;
+                            height: auto;
+                            border-radius: 35px;
+                          "
+                          src="https://uploads.codesandbox.io/uploads/user/adcc8816-3ca4-4e89-b714-e3b4fad44aec/UWgr-headerimg.png"
+                          alt=""
+                        /> -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;">
+                        <h2
+                        class="main_heading"
+                          style="
+                            font-weight: 900;
+                            font-size: 25px;
+                            margin-bottom: 20px;
+                            color: #000;
+                            line-height: 56px;
+                            margin-top: 10px;
+                          "
+                        >
+                        Get the best deal with Linkstar. Not only do you get a personalised landing page but you can also earn through Linkstar!
+
+                        </h2>
+                       
+                        <!-- <p
+                          style="
+                            font-size: 18px;
+                            line-height: 26px;
+                            font-weight: 400;
+                            color: #000;
+                            margin-bottom: 0;
+                          "
+                        >
+                       You just need a few steps to complete your Linkstar and we’ve got just the motivation boost you need to get the job done!
+                        </p> -->
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <table style="margin-top: 50px;">
+                        <tr style="display: flex;">
+                          <td style="width: 100%;">
+                            <!-- <h3
+                            class="left_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 32px;
+                                line-height: 40px;
+                                font-weight: 900;
+                                letter-spacing: -0.7px;
+                                color: #000;
+                                margin-bottom: 20px;
+                              "
+                            >
+                            Customize your Linkstar 
+                            </h3> -->
+                            <p
+                            class="left_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                                color: #000;
+                              "
+                            >
+                            How can you earn?
+Simply apply through your Linkstar dashboard, 
+under the opportunities tab.
+</p>
+                            <a
+                              href="https://digitalise.linkst.ar/"
+                              target="_blank"
+                              class="btnTheme"
+                              style="background: #f58634; color: #fff;"
+                              >View Now</a
+                            >
+                          </td>
+                          <td
+                            style="
+                              width: 100%;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <img
+                              style="
+                                width: 300px;
+                                height: 300px;
+                                border-radius: 35px;
+                              "
+                              src="https://aws.linkst.ar/storage/media/qZxd1lhnF13gKzjIIz81HWAHa26wsWbn9sUewpnc.png"
+                              alt=""
+                            />
+                          </td>
+                        </tr>
+                      </table>
+
+                      <table style="margin-top: 50px;">
+                        <tr style="display: flex;">
+                          <td
+                            style="
+                              width: 100%;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <img
+                              style="
+                                width: 300px;
+                                height: 300px;
+                                border-radius: 35px;
+                              "
+                              src="https://aws.linkst.ar/storage/media/FSW4AJm2FoeHSdoWJ5q60GbwB0QV7Xq7OagtfWAO.png"
+                              alt=""
+                            />
+                          </td>
+                          <td style="width: 100%;">
+                            <!-- <h3
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 32px;
+                                line-height: 40px;
+                                font-weight: 900;
+                                letter-spacing: -0.7px;
+                                color: #000;
+                                margin-bottom: 20px;
+                              "
+                            >
+                            Add images
+                            </h3> -->
+                            <p
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                                color: #000;
+                              "
+                            >
+                           Take a look at some of the companies that we have
+ matched our Pro 
+Linkstars with:
+
+</p>
+                            <!-- <a
+                              href="https://fizzahasan.store/"
+                              target="_blank"
+                              class="btnTheme"
+                              style="background: #F0CA47; color: #fff;"
+                              >View Now</a
+                            > -->
+                          </td>
+                        </tr>
+                      </table>
+
+                      <table style="margin-top: 50px;">
+                        <tr style="display: flex;">
+                          <td style="width: 100%;">
+                            <!-- <h3
+                            class="left_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 32px;
+                                line-height: 40px;
+                                font-weight: 900;
+                                letter-spacing: -0.7px;
+                                color: #000;
+                                margin-bottom: 20px;
+                              "
+                            >
+                            Add the services you offer
+                            </h3> -->
+                            <p
+                            class="left_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                                color: #000;
+                              "
+                            >
+                           Hear it from the Linkstars:
+“Through Linkstar I have gotten the opportunity
+ to work with various clients”  - Danial Asif
+
+</p>
+                            <!-- <a
+                              href="https://kulsoom98.linkst.ar/"
+                              target="_blank"
+                              class="btnTheme"
+                              style="background: #F58634; color: #fff;"
+                              >View Now</a
+                            > -->
+                          </td>
+                          <td
+                            style="
+                              width: 100%;
+                              display: flex;
+                              justify-content: flex-end;
+                            "
+                          >
+                            <img
+                              style="
+                                width: 300px;
+                                height: 300px;
+                                border-radius: 35px;
+                              "
+                              src="https://aws.linkst.ar/storage/media/54yUpGIxo4YLqRAHQNTtfo6bCzfsS1gygXE8XYvq.png"
+                              alt=""
+                            />
+                          </td>
+                        </tr>
+                      </table>
+ <table style="margin-top: 50px;">
+                        <tr style="display: flex;">
+                          <td
+                            style="
+                              width: 100%;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <img
+                              style="
+                                width: 300px;
+                                height: 300px;
+                                border-radius: 35px;
+                              "
+                              src="https://aws.linkst.ar/storage/media/7im2evEvAaRtNnYirSdqHxurOXmjmD1PmQLQvcxD.png"
+                              alt=""
+                            />
+                          </td>
+                          <td style="width: 100%;">
+                            <!-- <h3
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 32px;
+                                line-height: 40px;
+                                font-weight: 900;
+                                letter-spacing: -0.7px;
+                                color: #000;
+                                margin-bottom: 20px;
+                              "
+                            >
+                            Add images
+                            </h3> -->
+                            <p
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                                color: #000;
+                              "
+                            >
+                           
+“With linkstar I can apply easily to opportunities 
+that interest me through their dashboard and emails.” 
+- Safiuddin Razi
+
+
+</p>
+                            <!-- <a
+                              href="https://fizzahasan.store/"
+                              target="_blank"
+                              class="btnTheme"
+                              style="background: #F0CA47; color: #fff;"
+                              >View Now</a
+                            > -->
+                          </td>
+                        </tr>
+                      </table>
+
+<p style="margin-top: 30px;"><b>Just like them you can get access to opportunities by just adding the following sections:  basic information, social links, experiences, services, pricing, and gallery.
+</b></p>          
+ <!-- <table style="margin-top: 50px;">
+                        <tr style="display: flex;">
+                          <td
+                            style="
+                              width: 100%;
+                              display: flex;
+                              justify-content: flex-start;
+                            "
+                          >
+                            <img
+                              style="
+                                width: 300px;
+                                height: 300px;
+                                border-radius: 35px;
+                              "
+                              src="https://5ngcb8.csb.app/images/logo.png"
+                              alt=""
+                            />
+                          </td>
+                          <td style="width: 100%;">
+                            <h3
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 32px;
+                                line-height: 40px;
+                                font-weight: 900;
+                                letter-spacing: -0.7px;
+                                color: #000;
+                                margin-bottom: 20px;
+                              "
+                            >
+                            Areeba Zehra
+                            </h3>
+                            <p
+                            class="right_text"
+                              style="
+                                font-family: inter, sans-serif;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                                margin-bottom: 0;
+                                color: #000;
+                              "
+                            >
+
+                            Areeba Zehra is a product manager at a SAAS startup and she’s also a part-time blogger. She took full advantage of being a Pro User by replacing Linkstar’s footer logo with her own branding, showcasing her professionalism and creativity to prospective clients.                          </p>
+                            <a
+                              href="https://areebazehra.linkst.ar/"
+                              target="_blank"
+                              class="btnTheme"
+                              style="background: #91D8F6; color: #000;"
+                              >View Now</a
+                            >
+
+                          </td>
+                        </tr>
+                      </table> -->
+
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- END MAIN CONTENT AREA -->
+            </table>
+            <!-- END CENTERED WHITE CONTAINER -->
+
+            <!-- START FOOTER -->
+            <div class="footer">
+              <table
+                role="presentation"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+                style="margin-top: 50px;"
+              >
+                <tr>
+                  <td>
+                    <a
+                      href="https://linkst.ar/"
+                      class="btnTheme"
+                      target="_blank"
+                      style="
+                        background: none;
+                        padding: 0;
+                        line-height: 0;
+                        margin: auto;
+                        max-width: 200px;
+                      "
+                    >
+                      <img
+                        src="https://uploads.codesandbox.io/uploads/user/adcc8816-3ca4-4e89-b714-e3b4fad44aec/SpQI-logosite.png"
+                        style="width: 90px; padding: 0 !important;"
+                        alt="logo"
+                      />
+                    </a>
+                    <p
+                      style="
+                        font-family: inter, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: rgb(0, 0, 0);
+                        padding-bottom: 32px;
+                        font-weight: 700;
+                        margin-top: 16px;
+                        margin-bottom: 0;
+                      "
+                    >
+                      Brand. Link. Sell. Anything.
+                    </p>
+                    <p
+                      style="
+                        font-family: inter, sans-serif;
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: rgb(0, 0, 0);
+                        padding-bottom: 0;
+                        margin-bottom: 20px;
+                      "
+                    >
+                      You received this because you are a Linkstar user and
+                      subscribed to updates from Linkstar 🙌
+                    </p>
+                    <p>
+                      <a
+                        style="
+                          font-family: inter, sans-serif;
+                          font-size: 12px;
+                          line-height: 16px;
+                          font-weight: 400;
+                          color: rgb(0, 0, 0);
+                          padding-bottom: 0;
+                          margin-bottom: 20px;
+                        "
+                        href=""
+                        >Don't like these emails? Unsubscribe</a
+                      >
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom: 32px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span
+                              ><a
+                                href="https://www.facebook.com/getlinkst.ar?mibextid=ZbWKwL"
+                                target="_blank"
+                                ><img
+                                  width="44"
+                                  style="
+                                    margin: auto;
+                                    width: 44px;
+                                    height: auto;
+                                    display: block;
+                                  "
+                                  alt="Facebook Icon"
+                                  src="https://5ngcb8.csb.app/images/socials/facebook.png"
+                                  saveddisplaymode="block" /></a
+                            ></span>
+                          </td>
+                          <td>
+                            <span
+                              ><a
+                                href="https://twitter.com/LinkstarSocial?t=UgJnB75z6mRt6-_CFDXaDg&s=09"
+                                target="_blank"
+                                ><img
+                                  width="44"
+                                  style="
+                                    margin: auto;
+                                    width: 44px;
+                                    height: auto;
+                                    display: block;
+                                  "
+                                  alt="Twitter Icon"
+                                  src="https://5ngcb8.csb.app/images/socials/twitter.png" /></a
+                            ></span>
+                          </td>
+                          <td>
+                            <span
+                              ><a
+                                href="https://www.instagram.com/linkst.ar/?igshid=MDM4ZDc5MmU%3D"
+                                target="_blank"
+                                ><img
+                                  width="44"
+                                  style="
+                                    margin: auto;
+                                    width: 44px;
+                                    height: auto;
+                                    display: block;
+                                  "
+                                  alt="Instagram Icon"
+                                  src="https://5ngcb8.csb.app/images/socials/instagram.png" /></a
+                            ></span>
+                          </td>
+                          <td>
+                            <span
+                              ><a
+                                href="https://www.youtube.com/@linkstar1872"
+                                target="_blank"
+                                ><img
+                                  width="44"
+                                  style="
+                                    margin: auto;
+                                    width: 44px;
+                                    height: auto;
+                                    display: block;
+                                  "
+                                  alt="YouTube Icon"
+                                  src="https://5ngcb8.csb.app/images/socials/youtube.png" /></a
+                            ></span>
+                          </td>
+                          <td>
+                            <span
+                              ><a
+                                href="https://www.linkedin.com/company/linkstar1/"
+                                target="_blank"
+                                ><img
+                                  width="44"
+                                  style="
+                                    margin: auto;
+                                    width: 44px;
+                                    height: auto;
+                                    display: block;
+                                  "
+                                  alt="LinkedIn Icon"
+                                  src="https://5ngcb8.csb.app/images/socials/linkedin.png" /></a
+                            ></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- END FOOTER -->
+          </div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
